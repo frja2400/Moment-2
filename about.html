@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Bildbehandling - Moment 1</title>
+    <!--Link-element för att addera en favicon.-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Logga av mitt namn Frida" class="logga" />
+
+        <!--Menyknapp för att öppna mobilmeny-->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon"> <!--Span fungerar i en knapp, div fungerar ej.-->
+                <span class="bars"></span> <!--Tre streck för hamburgermenyn-->
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+
+        <!--Navigering-->
+        <nav id="nav-menu">
+
+            <!--Knapp som visas om mobilmenyn är utfälld-->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span> <!--Två streck som korsar varandra som ett kryss-->
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng meny</span>
+            </button>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="pictures.html">Bildbehandling</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="images/header-desktop.webp" media="(min-width: 835px)">
+            <source srcset="images/header-tablet.webp" media="(max-width: 834px) and (min-width: 391px)">
+            <source srcset="images/header-mobile.jpg, images/header-mobile.webp 2x" media="(max-width: 390px)">
+            <img src="images/header.jpg" alt="Borgholm på Öland" class="borgholm">
+        </picture>
+        <h1>Om mig</h1>
+        <div class="about">
+            <picture>
+                <source srcset="images/portratt.webp" type="image/webp">
+                <img src="images/portratt.png" alt="Bild på mig" class="porträtt">
+            </picture>          
+            <div>
+                <h2>Frida Jansson</h2>
+                <p>Jag har jobbat mycket lite med bildhantering tidigare. När jag jobbade som
+                    copywriter kunde jag ibland göra lite egna thumbnails eller enklare bilder
+                    för att hjälpa mina kollegor som jobbade med grafisk design. Så det mesta är helt nytt,
+                    jag känner igen några begrepp och ett par knappar.</p>
+                <br />
+                <br />
+                <br />
+                <h2>Om uppgiften</h2>
+                <p>Med denna webbplats så har jag skapat en startsida och ett par undersidor som demonstrerar
+                    bilder som jag har hanterat i Photopea på olika sätt för att lära mig lättare bildhantering.
+                    Jag har lärt mig väldigt mycket eftersom nästintill all bildhantering var ny för mig. Jag har
+                    utvecklat mina CSS- och JavaScript-kunskaper med bland annat togglemenyn som jag tyckte var väldigt
+                    lärorik och användbar. Jag har alltid tyckt att Photoshop/Photopea inte är särskilt användarvänligt
+                    och är ett ganska svårnavigerat program och mitt intresse för bildhantering är inte heller så högt
+                    så
+                    jag tyckte det var roligaste att designa och utforma webbplatsen. </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Laborationsuppgift för kursen DT200G, Grafisk design för webb.</p>
+        <p>© Copyright Frida Jansson, 2024</p>
+    </footer>
+</body>
+
+</html>

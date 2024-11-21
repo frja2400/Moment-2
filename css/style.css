@@ -1,0 +1,289 @@
+/*Centrerar rubriker och adderar typsnitt.*/
+h1,
+h2 {
+    font-family: "Roboto", sans-serif;
+    color: #E75A7C;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    font-family: "Roboto", sans-serif;
+}
+h1 {
+    margin-bottom: 50px;
+}
+
+
+/*Adderar skugga till texten som har bakgrundsbild. */
+.extraHeader,
+.search {
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/*Designar mina menyalternativ så att de står i rad bredvid varandra.*/
+li {
+    display: inline-block;
+    margin-right: 30px;
+}
+li a {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+li a:hover {
+    text-decoration: underline;
+}
+
+
+/*Designar min top border så att logga och menyaltarnativ centreras i den.*/
+header {
+    background-color: #BBC7A4;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 1px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+}
+.logga {
+    margin-left: 30px;
+}
+.menu-btn {
+    display: none;
+}
+
+
+/*Desingar footer och header-bild samt bakgrundsfärg.*/
+main {
+    background-color: #F2F5EA;
+    text-align: center;
+}
+footer {
+    background-color: #BBC7A4;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.borgholm {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+
+/*Ser till så att mina produktbilder placeras bredvid varandra. */
+.produkt1,
+.produkt2,
+.produkt3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+}
+
+
+/*Designar sök-knapp och tillhörande text. */
+.search {
+    border: white solid 4px;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 10px 0;
+}
+.search:hover {
+    background-color: #BBC7A4;
+    cursor: pointer;
+}
+.extraHeader {
+    line-height: 70px;
+    margin: 10px 0;
+}
+
+
+/*Justerar min gif.*/
+.gif {
+    margin-bottom: 100px;
+    width: 50%;
+}
+
+
+/*Placerar mitt porträtt och tillhörande text på rätt plats, bredvid varandra.*/
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5%;
+    padding-bottom: 100px;
+}
+.porträtt {
+    grid-column: 1;
+    width: 80%;
+    height: auto;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+p,
+h2 {
+    grid-column: 2;
+}
+
+
+/*Placerar mina behandlade bilder bredvid varandra.*/
+.gulbild,
+.kallbild,
+.svartvit,
+.hästvagn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 2%;
+    margin-bottom: 50px;
+}
+
+
+/*Design för tablet.*/
+@media screen and (max-width:834px) {
+    
+
+    /*Navigeringsmeny som visas när du trycker på menyknapp.*/
+    nav {
+        background-color: #BBC7A4;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        display: none;
+    }
+    nav ul {
+        width: 100%;
+        list-style-type: none;
+        text-align: center;
+    }
+    nav li {
+        padding: 5%;
+        width: 100%;
+    }
+
+
+    /*Menyknappar vid både öppen och stängd meny.*/
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        background-color: #BBC7A4;
+        border: black solid 0.5px;
+        padding: 8px 15px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+
+    /*Design av hamburgermeny och kryss.*/
+    .menu-icon {
+        margin-right: 10px;
+    }
+    .bars {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+    }
+    .cross1 {
+        width: 25px;
+        transform: rotate(45deg);
+        position: relative;
+        top: 5px;
+    }
+    .cross2 {
+        width: 25px;
+        transform: rotate(135deg);
+        position: relative;
+        top: -3px;
+    }
+    .menu-text {
+        font-size: 16px;
+    }
+
+
+    /*Ändrar storlek på produktbilder.*/
+    .produkt1,
+    .produkt2,
+    .produkt3 {
+        width: 30%;
+    }
+
+
+    /*Justerar så att bild och text hamnar i en kolumn på undersidan "Om mig".*/
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .porträtt {
+        grid-column: 1;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+    p,
+    h2 {
+        grid-column: 1;
+    }
+
+
+    /*Ändrar storlek på mina behandlade bilder så att de hamnar under varandra.*/
+    .gulbild,
+    .kallbild,
+    .svartvit,
+    .hästvagn {
+        width: 80%;
+    }
+
+
+    /*Ändrar storlek på gif.*/
+    .gif {
+        margin-bottom: 100px;
+        width: 80%;
+    }
+}
+
+
+/*Design för mobil.*/
+@media screen and (max-width:390px) {
+
+    .produkt1,
+    .produkt2,
+    .produkt3 {
+        width: 70%;
+    }
+
+    .gif {
+        margin-bottom: 60px;
+    }
+
+    nav {
+        width: 190px;
+    }
+}

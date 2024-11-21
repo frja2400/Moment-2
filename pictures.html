@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Bildbehandling - Moment 1</title>
+    <!--Link-element för att addera en favicon.-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Logga av mitt namn Frida" class="logga" />
+
+        <!--Menyknapp för att öppna mobilmeny-->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon"> <!--Span fungerar i en knapp, div fungerar ej.-->
+                <span class="bars"></span> <!--Tre streck för hamburgermenyn-->
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+
+        <!--Navigering-->
+        <nav id="nav-menu">
+
+            <!--Knapp som visas om mobilmenyn är utfälld-->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span> <!--Två streck som korsar varandra som ett kryss-->
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng meny</span>
+            </button>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="pictures.html">Bildbehandling</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="images/header-desktop.webp" media="(min-width: 835px)">
+            <source srcset="images/header-tablet.webp" media="(max-width: 834px) and (min-width: 391px)">
+            <source srcset="images/header-mobile.jpg, images/header-mobile.webp 2x" media="(max-width: 390px)">
+            <img src="images/header.jpg" alt="Borgholm på Öland" class="borgholm">
+        </picture>
+        <h1>Bildbehandling</h1>
+        <h2>Färgstick</h2>
+        <picture>
+            <source srcset="images/fargstick_fore.webp" type="image/webp">
+            <img src="images/fargstick_fore.jpg" alt="Tre hus med snö" class="gulbild">
+        </picture> 
+        <picture>
+            <source srcset="images/fargstick.webp" type="image/webp">
+            <img src="images/fargstick.jpg" alt="Tre hus med snö" class="kallbild">
+        </picture> 
+        <h2>Handkolorering och retusch</h2>
+        <picture>
+            <source srcset="images/handkolorering_fore.webp" type="image/webp">
+            <img src="images/handkolorering_fore.jpg" alt="Svartvit bild på en häst och vagn med fyra barn."
+            class="svartvit">
+        </picture> 
+        <picture>
+            <source srcset="images/handkolorering.webp" type="image/webp">
+            <img src="images/handkolorering.jpg" alt="Bild på en häst och vagn med fyra barn." class="hästvagn">
+        </picture> 
+    </main>
+
+    <footer>
+        <p>Laborationsuppgift för kursen DT200G, Grafisk design för webb.</p>
+        <p>© Copyright Frida Jansson, 2024</p>
+    </footer>
+</body>
+
+</html>
